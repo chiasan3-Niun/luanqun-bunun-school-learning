@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>巒群布農語｜山林冒險學習站</title>
+  <meta name="description" content="巒群布農語校園與生活用品闖關學習站。">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <main id="app" class="game-shell">
+    <header class="hero">
+      <div class="hero-copy">
+        <p class="eyebrow">LUANQUN BUNUN · LANGUAGE QUEST</p>
+        <h1>山林語言冒險</h1>
+        <p class="hero-subtitle">校園與生活用品</p>
+        <p class="hero-intro">聽見詞彙、找到線索，走完你的第一條巒群布農語學習路線。</p>
+      </div>
+      <div class="game-stats" aria-label="遊戲統計">
+        <div><strong id="stars">0</strong><span>星星</span></div>
+        <div><strong id="badges">0</strong><span>徽章</span></div>
+        <div><strong id="progress-label">0/4</strong><span>關卡</span></div>
+      </div>
+    </header>
+
+    <section id="adventure-map" class="adventure-map" aria-labelledby="map-title">
+      <div class="section-title"><span>MAP 01</span><h2 id="map-title">校園森林路線</h2></div>
+      <div class="map-path">
+        <button class="map-node active" data-mode="learn" type="button"><span>01</span><b>詞彙營地</b><small>先認識</small></button>
+        <i></i>
+        <button class="map-node" data-mode="listen-picture" type="button"><span>02</span><b>聽音小徑</b><small>聽音找圖</small></button>
+        <i></i>
+        <button class="map-node" data-mode="memory-match" type="button"><span>03</span><b>記憶溪谷</b><small>翻牌配對</small></button>
+        <i></i>
+        <button class="map-node" data-mode="boss-challenge" type="button"><span>04</span><b>句子首領</b><small>總挑戰</small></button>
+      </div>
+    </section>
+
+    <section id="mode-panel" class="mode-panel" aria-live="polite">
+      <div class="mode-heading"><p id="mode-kicker">MISSION 01</p><h2 id="mode-title">詞彙營地</h2><p id="mode-description">先把詞彙和畫面記在腦中。</p></div>
+      <div id="mode-content"></div>
+    </section>
+
+    <section id="boss-challenge" class="boss-card" aria-label="首領挑戰">
+      <div><span class="boss-mark">BOSS</span><h2>森林守護者的問題</h2><p>完成前面的關卡後，挑戰教材句型與情境問答。</p></div>
+      <button id="start-boss" class="button coral" type="button">開始首領挑戰</button>
+    </section>
+
+    <p id="status" class="site-status" role="status"></p>
+    <footer class="site-footer">
+      <div class="footer-heading">學習站資料與授權說明</div>
+      <p>詞彙、例句與中文解釋依《【巒群布農語】國中》教材整理；原始教材內容之著作權歸原權利人所有。</p>
+      <p>族語音檔來源：<a href="https://ai-labs.ilrdf.org.tw/hnang-kari-ai-asi-sluhay/" target="_blank" rel="noopener noreferrer">族語語音合成平台</a>（布農語／巒群／男聲）；音檔仍需由族語使用者或教師確認。</p>
+      <p>圖卡為本學習站製作之教學插圖，僅供課程與學習使用，未經授權不得轉載或作商業用途。</p>
+      <p>製作者：課程設計者與網站製作團隊。</p>
+      <p class="footer-copyright">© 2026 巒群布農語學習站。除另有註明外，本網站介面與程式碼保留著作權。</p>
+    </footer>
+  </main>
+  <script src="data/unit-school-supplies.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
